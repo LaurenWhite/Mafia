@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BC8E84416F458CA33F72E64 /* Pods_Mafia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FADB8382C68342F0509CA /* Pods_Mafia.framework */; };
 		4E0D4AA420058C810002961C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AA320058C800002961C /* AppDelegate.swift */; };
 		4E0D4AA620058C810002961C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AA520058C810002961C /* ViewController.swift */; };
 		4E0D4AA920058C810002961C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D4AA720058C810002961C /* Main.storyboard */; };
 		4E0D4AAB20058C810002961C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D4AAA20058C810002961C /* Assets.xcassets */; };
 		4E0D4AAE20058C810002961C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D4AAC20058C810002961C /* LaunchScreen.storyboard */; };
 		4E0D4AB920058C810002961C /* MafiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AB820058C810002961C /* MafiaTests.swift */; };
+		4E0D4AC420058FBC0002961C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D4AC320058FBC0002961C /* GoogleService-Info.plist */; };
+		A234738ABBE55A863D42B279 /* Pods_MafiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,13 @@
 		4E0D4AB420058C810002961C /* MafiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MafiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0D4AB820058C810002961C /* MafiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaTests.swift; sourceTree = "<group>"; };
 		4E0D4ABA20058C810002961C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0D4AC320058FBC0002961C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5AF09F5D82C4F08D5B21F4AF /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
+		622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MafiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED0AEB1CF15886BDA7ACAB1 /* Pods-MafiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MafiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MafiaTests/Pods-MafiaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95EF3996665DE7CD35495C27 /* Pods-MafiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MafiaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MafiaTests/Pods-MafiaTests.release.xcconfig"; sourceTree = "<group>"; };
+		C58FADB8382C68342F0509CA /* Pods_Mafia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mafia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5E7356658CF0D0BE524867 /* Pods-Mafia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC8E84416F458CA33F72E64 /* Pods_Mafia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A234738ABBE55A863D42B279 /* Pods_MafiaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,8 @@
 				4E0D4AA220058C800002961C /* Mafia */,
 				4E0D4AB720058C810002961C /* MafiaTests */,
 				4E0D4AA120058C800002961C /* Products */,
+				504D2B8BED611843B317429E /* Pods */,
+				FF686E5290BCD00471AC0C6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +96,7 @@
 				4E0D4AA720058C810002961C /* Main.storyboard */,
 				4E0D4AAA20058C810002961C /* Assets.xcassets */,
 				4E0D4AAC20058C810002961C /* LaunchScreen.storyboard */,
+				4E0D4AC320058FBC0002961C /* GoogleService-Info.plist */,
 				4E0D4AAF20058C810002961C /* Info.plist */,
 			);
 			path = Mafia;
@@ -96,6 +111,26 @@
 			path = MafiaTests;
 			sourceTree = "<group>";
 		};
+		504D2B8BED611843B317429E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AF09F5D82C4F08D5B21F4AF /* Pods-Mafia.debug.xcconfig */,
+				EF5E7356658CF0D0BE524867 /* Pods-Mafia.release.xcconfig */,
+				8ED0AEB1CF15886BDA7ACAB1 /* Pods-MafiaTests.debug.xcconfig */,
+				95EF3996665DE7CD35495C27 /* Pods-MafiaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF686E5290BCD00471AC0C6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58FADB8382C68342F0509CA /* Pods_Mafia.framework */,
+				622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E0D4ABD20058C810002961C /* Build configuration list for PBXNativeTarget "Mafia" */;
 			buildPhases = (
+				838746A656983A2D474FDB1F /* [CP] Check Pods Manifest.lock */,
 				4E0D4A9C20058C800002961C /* Sources */,
 				4E0D4A9D20058C800002961C /* Frameworks */,
 				4E0D4A9E20058C800002961C /* Resources */,
+				E151E6EB97D9E39430E587FA /* [CP] Embed Pods Frameworks */,
+				0A3581292EEA41FF119D195A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E0D4AC020058C810002961C /* Build configuration list for PBXNativeTarget "MafiaTests" */;
 			buildPhases = (
+				EF58E70C8F96E00745C86F0F /* [CP] Check Pods Manifest.lock */,
 				4E0D4AB020058C810002961C /* Sources */,
 				4E0D4AB120058C810002961C /* Frameworks */,
 				4E0D4AB220058C810002961C /* Resources */,
+				4B3B0B1CBEACC480037AB3FC /* [CP] Embed Pods Frameworks */,
+				A28773BD72172C3681B483B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0D4AAE20058C810002961C /* LaunchScreen.storyboard in Resources */,
+				4E0D4AC420058FBC0002961C /* GoogleService-Info.plist in Resources */,
 				4E0D4AAB20058C810002961C /* Assets.xcassets in Resources */,
 				4E0D4AA920058C810002961C /* Main.storyboard in Resources */,
 			);
@@ -193,6 +235,112 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A3581292EEA41FF119D195A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mafia/Pods-Mafia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B3B0B1CBEACC480037AB3FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MafiaTests/Pods-MafiaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		838746A656983A2D474FDB1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mafia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A28773BD72172C3681B483B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MafiaTests/Pods-MafiaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E151E6EB97D9E39430E587FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mafia/Pods-Mafia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mafia/Pods-Mafia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF58E70C8F96E00745C86F0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MafiaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E0D4A9C20058C800002961C /* Sources */ = {
@@ -351,6 +499,7 @@
 		};
 		4E0D4ABE20058C810002961C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF09F5D82C4F08D5B21F4AF /* Pods-Mafia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +514,7 @@
 		};
 		4E0D4ABF20058C810002961C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5E7356658CF0D0BE524867 /* Pods-Mafia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +529,7 @@
 		};
 		4E0D4AC120058C810002961C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ED0AEB1CF15886BDA7ACAB1 /* Pods-MafiaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -395,6 +546,7 @@
 		};
 		4E0D4AC220058C810002961C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EF3996665DE7CD35495C27 /* Pods-MafiaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
