@@ -14,6 +14,10 @@ class SleepCycleViewController: UIViewController {
     @IBOutlet weak var centeredImageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
     
+    var selectedPlayer: String?
+    
+    let playerDatabase = PlayerDatabase()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +50,10 @@ class SleepCycleViewController: UIViewController {
         //Person with most votes dies, or tie a person is randomly selected from the tie
         //Give message to mafia: Close your eyes
         //Return to moon image
+        for player in playerDatabase.mafiaRoster(){
+            print(player)
+            //Segue to Table View for vote
+        }
     }
     
     func wakeInvestigator(){

@@ -14,6 +14,8 @@ class PlayerListTVC: UITableViewController{
     let playerDatabase = PlayerDatabase()
     let selectedCharacter = ""
     var playerOptions: [String] = []
+    var votes: [String:Int] = [:]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,14 @@ class PlayerListTVC: UITableViewController{
         playerOptions.sort()
     }
 
-    
+    func addVote(playerName: String){
+        if votes.keys.contains(playerName){
+            votes[playerName] = votes[playerName]! + 1
+        }else{
+            votes[playerName] = 1
+        }
+        print(votes)
+    }
     
     // MARK: - Table view data source
 
@@ -106,14 +115,26 @@ class PlayerListTVC: UITableViewController{
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SleepCycleViewController,
+        let tableViewCell = sender as? UITableViewCell,
+            let index = tableView.indexPath(for: tableViewCell)?.row{
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+            let selectedPlayer = playerOptions[index]
+            destination.selectedPlayer = selectedPlayer
+        }
+        if let destination = segue.destination as? VotedViewController,
+            let tableViewCell = sender as? UITableViewCell,
+            let index = tableView.indexPath(for: tableViewCell)?.row{
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+            let selectedPlayer = playerOptions[index]
+            destination.selectedPlayer = selectedPlayer
+        }
     }
-    */
-
 }

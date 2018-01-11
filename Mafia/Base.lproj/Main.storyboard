@@ -103,14 +103,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Who You'll [Blank]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LjO-Dy-SvI">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playercell" id="fcB-vc-aUT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fcB-vc-aUT" id="sPg-5s-RwK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="2gP-xm-dFz" kind="show" id="h7j-an-fWL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -122,6 +132,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1m-aL-sia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1525" y="-595"/>
+        </scene>
+        <!--Voted View Controller-->
+        <scene sceneID="ek9-5E-tUq">
+            <objects>
+                <viewController id="2gP-xm-dFz" customClass="VotedViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDi-5u-cLk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You chose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bO-G6-0to">
+                                <rect key="frame" x="69" y="105" width="236" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mI-G8-K3C">
+                                <rect key="frame" x="69" y="430" width="236" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3bO-G6-0to" firstAttribute="centerX" secondItem="eDi-5u-cLk" secondAttribute="centerX" id="0UP-jm-qgD"/>
+                            <constraint firstItem="3bO-G6-0to" firstAttribute="top" secondItem="6OL-bG-nja" secondAttribute="top" constant="85" id="11V-aU-5Qp"/>
+                            <constraint firstItem="4mI-G8-K3C" firstAttribute="leading" secondItem="6OL-bG-nja" secondAttribute="leading" constant="69" id="BN3-3A-acn"/>
+                            <constraint firstItem="6OL-bG-nja" firstAttribute="bottom" secondItem="4mI-G8-K3C" secondAttribute="bottom" constant="200" id="I08-Af-KMB"/>
+                            <constraint firstItem="4mI-G8-K3C" firstAttribute="centerX" secondItem="eDi-5u-cLk" secondAttribute="centerX" id="QKA-Ul-qOV"/>
+                            <constraint firstItem="6OL-bG-nja" firstAttribute="trailing" secondItem="3bO-G6-0to" secondAttribute="trailing" constant="70" id="QTi-c8-htM"/>
+                            <constraint firstItem="6OL-bG-nja" firstAttribute="trailing" secondItem="4mI-G8-K3C" secondAttribute="trailing" constant="70" id="adE-4B-Naz"/>
+                            <constraint firstItem="3bO-G6-0to" firstAttribute="leading" secondItem="6OL-bG-nja" secondAttribute="leading" constant="69" id="vgU-HY-dry"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6OL-bG-nja"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerNameLabel" destination="4mI-G8-K3C" id="ewb-wn-Egj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1j-I3-SFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448.8000000000002" y="-595.05247376311854"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="1l4-sC-Jpc">
