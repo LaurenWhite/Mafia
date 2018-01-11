@@ -16,6 +16,8 @@
 		4E0D4AB920058C810002961C /* MafiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AB820058C810002961C /* MafiaTests.swift */; };
 		4E0D4AC420058FBC0002961C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D4AC320058FBC0002961C /* GoogleService-Info.plist */; };
 		4E0D4ACA2007C6540002961C /* SleepCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AC92007C6540002961C /* SleepCycleViewController.swift */; };
+		4E0D4ACE2007D6000002961C /* PlayerListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4ACD2007D6000002961C /* PlayerListTVC.swift */; };
+		4E0D4AD02007D61A0002961C /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4ACF2007D61A0002961C /* Players.swift */; };
 		A234738ABBE55A863D42B279 /* Pods_MafiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		4E0D4ABA20058C810002961C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E0D4AC320058FBC0002961C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4E0D4AC92007C6540002961C /* SleepCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepCycleViewController.swift; sourceTree = "<group>"; };
+		4E0D4ACD2007D6000002961C /* PlayerListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListTVC.swift; sourceTree = "<group>"; };
+		4E0D4ACF2007D61A0002961C /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		5AF09F5D82C4F08D5B21F4AF /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
 		622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MafiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED0AEB1CF15886BDA7ACAB1 /* Pods-MafiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MafiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MafiaTests/Pods-MafiaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,12 +99,14 @@
 			children = (
 				4E0D4AA320058C800002961C /* AppDelegate.swift */,
 				4E0D4AA520058C810002961C /* ViewController.swift */,
+				4E0D4AC92007C6540002961C /* SleepCycleViewController.swift */,
+				4E0D4ACD2007D6000002961C /* PlayerListTVC.swift */,
+				4E0D4ACF2007D61A0002961C /* Players.swift */,
 				4E0D4AA720058C810002961C /* Main.storyboard */,
 				4E0D4AAA20058C810002961C /* Assets.xcassets */,
 				4E0D4AAC20058C810002961C /* LaunchScreen.storyboard */,
 				4E0D4AC320058FBC0002961C /* GoogleService-Info.plist */,
 				4E0D4AAF20058C810002961C /* Info.plist */,
-				4E0D4AC92007C6540002961C /* SleepCycleViewController.swift */,
 			);
 			path = Mafia;
 			sourceTree = "<group>";
@@ -350,6 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0D4ACE2007D6000002961C /* PlayerListTVC.swift in Sources */,
+				4E0D4AD02007D61A0002961C /* Players.swift in Sources */,
 				4E0D4ACA2007C6540002961C /* SleepCycleViewController.swift in Sources */,
 				4E0D4AA620058C810002961C /* ViewController.swift in Sources */,
 				4E0D4AA420058C810002961C /* AppDelegate.swift in Sources */,

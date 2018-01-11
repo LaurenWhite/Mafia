@@ -10,10 +10,17 @@ import UIKit
 
 class SleepCycleViewController: UIViewController {
 
+    
+    @IBOutlet weak var centeredImageView: UIImageView!
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        everyoneSleep()
+        wakeMafia()
+        wakeInvestigator()
+        wakeDoctor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +32,10 @@ class SleepCycleViewController: UIViewController {
     func everyoneSleep(){
         //Display moon image
         //Give message: Everyone close your eyes
+        centeredImageView.image = UIImage(named: "Moon")
+        messageLabel.font = UIFont(name: "PTMonoBold", size: 40)
+        messageLabel.text = "Everyone close your eyes. It's nighttime."
+        centeredImageView.isHidden = false
     }
     
     func wakeMafia(){
@@ -35,7 +46,6 @@ class SleepCycleViewController: UIViewController {
         //Person with most votes dies, or tie a person is randomly selected from the tie
         //Give message to mafia: Close your eyes
         //Return to moon image
-        
     }
     
     func wakeInvestigator(){
