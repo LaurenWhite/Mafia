@@ -8,14 +8,18 @@
 
 import UIKit
 
-class PlayerListTVC: UITableViewController {
+class PlayerListTVC: UITableViewController{
 
+    let turn = "investigator" //get passed from previous view controller
     let playerDatabase = PlayerDatabase()
     let selectedCharacter = ""
+    var playerOptions: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        determinePlayerOptions() //creates player list based on which group/person is awake
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,25 +31,42 @@ class PlayerListTVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func determinePlayerOptions(){
+        playerOptions.append(contentsOf: playerDatabase.innocentRoster())
+        playerOptions.append(playerDatabase.doctor())
+        if turn == "mafia"{
+            playerOptions.append(playerDatabase.investigator())
+        }else if turn == "investigator"{
+            playerOptions.append(contentsOf: playerDatabase.mafiaRoster())
+        }else{
+            playerOptions.append(playerDatabase.investigator())
+            playerOptions.append(contentsOf: playerDatabase.mafiaRoster())
+        }
+        playerOptions.sort()
+    }
 
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return playerDatabase.playerCount()
+        print(playerDatabase.playerCount())
+        return playerOptions.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playercell", for: indexPath)
+        let player = playerOptions[indexPath.row]
         // Configure the cell...
-
+        cell.textLabel?.text = player
         return cell
     }
     
