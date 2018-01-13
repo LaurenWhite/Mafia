@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BC8E84416F458CA33F72E64 /* Pods_Mafia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FADB8382C68342F0509CA /* Pods_Mafia.framework */; };
+		4E07D5122009CD9E007E28AD /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E07D5112009CD9E007E28AD /* UsernameViewController.swift */; };
 		4E0D4AA420058C810002961C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AA320058C800002961C /* AppDelegate.swift */; };
 		4E0D4AA620058C810002961C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AA520058C810002961C /* ViewController.swift */; };
 		4E0D4AA920058C810002961C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0D4AA720058C810002961C /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E07D5112009CD9E007E28AD /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		4E0D4AA020058C800002961C /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0D4AA320058C800002961C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E0D4AA520058C810002961C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0D4AA320058C800002961C /* AppDelegate.swift */,
+				4E07D5112009CD9E007E28AD /* UsernameViewController.swift */,
 				4E0D4AA520058C810002961C /* ViewController.swift */,
 				4E0D4AC92007C6540002961C /* SleepCycleViewController.swift */,
 				4E0D4ACD2007D6000002961C /* PlayerListTVC.swift */,
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E07D5122009CD9E007E28AD /* UsernameViewController.swift in Sources */,
 				4E0D4ACE2007D6000002961C /* PlayerListTVC.swift in Sources */,
 				4E0D4AD22007EBE00002961C /* VotedViewController.swift in Sources */,
 				4E0D4AD02007D61A0002961C /* Players.swift in Sources */,

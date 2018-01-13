@@ -10,7 +10,7 @@ import UIKit
 
 class PlayerListTVC: UITableViewController{
 
-    let turn = "investigator" //get passed from previous view controller
+    var turn: String? //get passed from previous view controller
     let playerDatabase = PlayerDatabase()
     let selectedCharacter = ""
     var playerOptions: [String] = []
@@ -55,6 +55,18 @@ class PlayerListTVC: UITableViewController{
             votes[playerName] = 1
         }
         print(votes)
+    }
+    
+    func mostVotes() -> String{
+        var max = 0
+        var winner = ""
+        for candidate in votes.keys{
+            if votes[candidate]! >= max{
+                max = votes[candidate]!
+                winner = candidate
+            }
+        }
+        return winner
     }
     
     // MARK: - Table view data source
@@ -120,14 +132,6 @@ class PlayerListTVC: UITableViewController{
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SleepCycleViewController,
-        let tableViewCell = sender as? UITableViewCell,
-            let index = tableView.indexPath(for: tableViewCell)?.row{
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-            let selectedPlayer = playerOptions[index]
-            destination.selectedPlayer = selectedPlayer
-        }
         if let destination = segue.destination as? VotedViewController,
             let tableViewCell = sender as? UITableViewCell,
             let index = tableView.indexPath(for: tableViewCell)?.row{

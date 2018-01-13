@@ -9,14 +9,17 @@
 import UIKit
 
 class SleepCycleViewController: UIViewController {
-
     
+    //UI OUTLETS
     @IBOutlet weak var centeredImageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
     
-    var selectedPlayer: String?
+    //GENERAL VARIABLE
+    var victim: String?
     
+    //REFERENCES
     let playerDatabase = PlayerDatabase()
+    let playerList = PlayerListTVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +53,14 @@ class SleepCycleViewController: UIViewController {
         //Person with most votes dies, or tie a person is randomly selected from the tie
         //Give message to mafia: Close your eyes
         //Return to moon image
-        for player in playerDatabase.mafiaRoster(){
-            print(player)
+        //for player in playerDatabase.mafiaRoster(){
+            //print(player)
             //Segue to Table View for vote
-        }
+        //}
+        playerList.turn = "mafia"
+        performSegue(withIdentifier: "displayplayerlist", sender: nil)
+        victim = playerList.mostVotes()
+        messageLabel.text = "Mafia close you eyes."
     }
     
     func wakeInvestigator(){
@@ -73,16 +80,4 @@ class SleepCycleViewController: UIViewController {
         //Give message to doctor: Close your eyes
         //Return to moon image
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

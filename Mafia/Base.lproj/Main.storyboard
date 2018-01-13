@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F7j-Nn-IZW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rye-Ov-j3d">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUh-1Q-00u">
@@ -89,11 +89,12 @@
                     <connections>
                         <outlet property="centeredImageView" destination="zHt-5N-27R" id="00z-gn-CKY"/>
                         <outlet property="messageLabel" destination="wdY-hP-4NZ" id="MEV-te-MZc"/>
+                        <segue destination="F7j-Nn-IZW" kind="show" identifier="displayplayerlist" id="AUB-RJ-rVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnq-wa-NX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493.60000000000002" y="-609.44527736131943"/>
+            <point key="canvasLocation" x="558" y="-610"/>
         </scene>
         <!--Player ListTVC-->
         <scene sceneID="nmW-vD-aPu">
@@ -180,7 +181,7 @@
             <objects>
                 <tableViewController id="Gsj-44-ayh" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eeR-Sm-NJj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -222,12 +223,57 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EJC-q4-YEC"/>
+                        <segue destination="MIJ-Jb-Yak" kind="relationship" relationship="rootViewController" id="JKK-RK-r8l"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3Q-2E-iDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="118"/>
+            <point key="canvasLocation" x="-1809" y="118"/>
+        </scene>
+        <!--Username View Controller-->
+        <scene sceneID="MoI-GC-9wW">
+            <objects>
+                <viewController id="MIJ-Jb-Yak" customClass="UsernameViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ba9-By-MA7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4v-Du-ua5">
+                                <rect key="frame" x="-126" y="399" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJm-pk-7Fo">
+                                <rect key="frame" x="38" y="281" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="3Ym-hw-sCT"/>
+                                    <constraint firstAttribute="height" constant="40" id="FdY-jv-w4m"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                <connections>
+                                    <action selector="returnPressed:" destination="MIJ-Jb-Yak" eventType="editingDidEnd" id="PUh-Xz-jlV"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZJm-pk-7Fo" firstAttribute="centerY" secondItem="Ba9-By-MA7" secondAttribute="centerY" id="kga-jl-eJg"/>
+                            <constraint firstItem="ZJm-pk-7Fo" firstAttribute="centerX" secondItem="Ba9-By-MA7" secondAttribute="centerX" id="wgY-Mq-jAf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T3f-rY-6Vd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AIc-8P-wXJ"/>
+                    <connections>
+                        <outlet property="usernameTextBox" destination="ZJm-pk-7Fo" id="4um-nw-kkY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IlS-cs-WBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674.39999999999998" y="109.29535232383809"/>
         </scene>
     </scenes>
 </document>
