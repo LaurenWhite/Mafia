@@ -8,13 +8,11 @@
 
 import UIKit
 
-var username = ""
+var username = "Lauren"
 
 class UsernameViewController: UIViewController {
 
     @IBOutlet weak var usernameTextBox: UITextField!
-    
-    var username: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +24,14 @@ class UsernameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func returnPressed(_ sender: Any) {
+
+    @IBAction func continuePressed(_ sender: Any) {
         let input = usernameTextBox.text
         if input != "" {
-            username = input
+            username = input!
+            print(username)
         }
-    }
-
-    
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        self.performSegue(withIdentifier: "abc", sender: nil)
     }
     
-
 }
