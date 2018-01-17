@@ -16,6 +16,7 @@ class SleepCycleViewController: UIViewController {
     
     //GENERAL VARIABLE
     var victim: String?
+    var players: [String: [String]]?
     
     //REFERENCES
     let playerDatabase = PlayerDatabase()
@@ -24,6 +25,7 @@ class SleepCycleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //print(players)
         everyoneSleep()
         wakeMafia()
         wakeInvestigator()
@@ -40,7 +42,6 @@ class SleepCycleViewController: UIViewController {
         //Display moon image
         //Give message: Everyone close your eyes
         centeredImageView.image = UIImage(named: "Moon")
-        messageLabel.font = UIFont(name: "PTMonoBold", size: 40)
         messageLabel.text = "Everyone close your eyes. It's nighttime."
         centeredImageView.isHidden = false
     }

@@ -25,22 +25,16 @@ class NewLobbyViewController: UIViewController {
         if input != "" {
             lobbyName = input!
             lobbyDatabase.createLobby(lobbyName: lobbyName)
-            //inLobby.lobbyName = lobbyName
-            //print(inLobby.lobbyName)
         }
         performSegue(withIdentifier: "joinedlobby1", sender: nil)
     }
     
-
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         if let destination = segue.destination as? InLobbyViewController {
             destination.lobbyName = lobbyName
+            destination.lobbyCreator = username
         }
         
     }

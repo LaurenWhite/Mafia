@@ -12,12 +12,20 @@ import FirebaseDatabase
 
 class InLobbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let lobby = Database.database().reference().child("lobbies")
+    let lobbyDatabase = LobbyDatabase()
+    let playerDatabase = PlayerDatabase()
+    
     @IBOutlet weak var lobbyNameLabel: UILabel!
     @IBOutlet weak var memberListTableView: UITableView!
+    @IBOutlet weak var startGame: UIButton!
+    @IBOutlet weak var lobbyInfoLabel: UILabel!
     
     var lobbyName: String?
+    var lobbyCreator: String?
     var curLobby: DatabaseReference!
     var members: [String] = []
+    var assignedRoster: [String:[String]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +33,9 @@ class InLobbyViewController: UIViewController, UITableViewDelegate, UITableViewD
         memberListTableView.dataSource = self
         memberListTableView.delegate = self
         
-        
         curLobby = Database.database().reference().root.child("lobbies").child(lobbyName!)
         lobbyNameLabel.text = lobbyName!
-        print("GOT HERE!")
-        print(members)
         observeMembers()
-        print(members)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,22 +44,11 @@ class InLobbyViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func observeMembers(){
-        //func observeMessages() {
-            //YOUR CODE HERE
-            /*root.child("chat").observe(.value, with: {(snapshot) in
-             if let messages = snapshot.value as? [String:String]{
-             self.messages = Array(messages.values)
-             self.tableView.reloadData()
-             //print(messages)
-             }
-             })*/
-            
         curLobby.child("members").observe(.value) { (snapshot) in
             if let curMembers = snapshot.value as? [String:String]{
                 self.members = Array(curMembers.values)
-                print(curMembers)
-                print(self.members)
                 self.memberListTableView.reloadData()
+                self.monitorPlayerCount()
             }
         }
     }
@@ -70,18 +63,48 @@ class InLobbyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let member = members[indexPath.row]
         cell.textLabel?.text = member
-        
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.font.withSize(25)
         return cell
     }
     
-    /*
+    func monitorPlayerCount(){
+        let minimum = 6
+        
+        if (minimum - (members.count)) > 0 {
+            lobbyInfoLabel.text = "This lobby needs " + String(minimum - members.count) + " more players."
+            startGame.alpha = 0.5
+        }else{
+            lobbyInfoLabel.text = "Waiting on lobby creator to start the game."
+            
+            if (username == lobbyCreator){
+                startGame.alpha = 1
+            }else{
+                startGame.alpha = 0.5
+            }
+        }
+    }
+    
+    @IBAction func startGamePressed(_ sender: UIButton) {
+        if (username==lobbyCreator && startGame.alpha==1){
+            //initiate game for all players?
+            assignedRoster = playerDatabase.assignRoles(members: members)
+            performSegue(withIdentifier: "startgame", sender: nil)
+        }
+    }
+    
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? SleepCycleViewController{
+            destination.players = assignedRoster
+        }
     }
-    */
+    
 
 }

@@ -48,23 +48,14 @@ class LobbyDatabase{
         lobby.child(lobbyName).child("playerCount").observeSingleEvent(of: .value) { (snapshot) in
             if let currentCount = snapshot.value as? Int {
                 self.currentCount = currentCount
-                print(currentCount)
                 let newCount = currentCount + 1
                 lobby.child(lobbyName).child("playerCount").setValue(newCount)
-                print()
-                print(newCount)
             }
         }
-        
-    //func getPlayerCount(lobbyName: String) -> Int{
-      //  lobby.child(lobbyName)
-    //}
+    }
     
-        
     func deleteEmptyLobbies(){
             
     }
         
-        
-    }
 }
