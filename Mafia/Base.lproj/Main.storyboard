@@ -237,20 +237,60 @@
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="162.3688155922039"/>
         </scene>
-        <!--View Controller-->
+        <!--In Lobby View Controller-->
         <scene sceneID="W7I-xd-SJB">
             <objects>
-                <viewController id="mfR-ZD-p9y" sceneMemberID="viewController">
+                <viewController id="mfR-ZD-p9y" customClass="InLobbyViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mW2-7w-3vK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="8k3-nj-ajF">
+                                <rect key="frame" x="16" y="20" width="343" height="637"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lobby Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-VH-CAE">
+                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pk9-oc-YTO">
+                                        <rect key="frame" x="0.0" y="46" width="343" height="591"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" id="m5Z-TG-bKD">
+                                                <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m5Z-TG-bKD" id="mUn-nd-yaz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pk9-oc-YTO" secondAttribute="trailing" id="V9p-Cz-sJZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8k3-nj-ajF" firstAttribute="top" secondItem="CRB-HK-KQM" secondAttribute="top" id="3Z9-0X-Ead"/>
+                            <constraint firstItem="CRB-HK-KQM" firstAttribute="trailing" secondItem="8k3-nj-ajF" secondAttribute="trailing" constant="16" id="FvT-af-c0a"/>
+                            <constraint firstItem="CRB-HK-KQM" firstAttribute="bottom" secondItem="8k3-nj-ajF" secondAttribute="bottom" constant="10" id="OXR-WC-FFq"/>
+                            <constraint firstItem="8k3-nj-ajF" firstAttribute="leading" secondItem="CRB-HK-KQM" secondAttribute="leading" constant="16" id="YGe-ap-5sX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CRB-HK-KQM"/>
                     </view>
+                    <connections>
+                        <outlet property="lobbyNameLabel" destination="AL3-VH-CAE" id="rMS-kA-5pI"/>
+                        <outlet property="memberListTableView" destination="Pk9-oc-YTO" id="jQc-qM-1PJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIn-7U-ded" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="585"/>
+            <point key="canvasLocation" x="2364" y="584.25787106446785"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="1l4-sC-Jpc">
@@ -321,7 +361,6 @@
                     <connections>
                         <outlet property="usernameTextBox" destination="ZJm-pk-7Fo" id="4um-nw-kkY"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="tolobby" action="showViewController:sender:" id="tQY-9z-UTn"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="abc" id="xqN-yI-Qp2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlS-cs-WBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,7 +368,4 @@
             <point key="canvasLocation" x="-1310" y="339"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xqN-yI-Qp2"/>
-    </inferredMetricsTieBreakers>
 </document>

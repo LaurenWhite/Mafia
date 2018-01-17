@@ -11,16 +11,6 @@ import Firebase
 import FirebaseDatabase
 
 class ViewController: UIViewController {
-
-    struct Lobby{
-        var members: [String] = []
-        var playerCount = 0
-        var creator = "None"
-    }
-    
-    var root: DatabaseReference!
-    var lobbies: [Lobby] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

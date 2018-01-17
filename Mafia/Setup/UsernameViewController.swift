@@ -31,7 +31,7 @@ class UsernameViewController: UIViewController {
             username = input!
             print(username)
         }
-        self.performSegue(withIdentifier: "abc", sender: nil)
+        self.performSegue(withIdentifier: "tolobby", sender: nil)
     }
     
 }
