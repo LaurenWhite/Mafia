@@ -18,9 +18,18 @@ private var players: [String:[String]] = [//Player:Role
     ]
 */
 
+var players: [String:[String]] = [//Player:Role
+    "mafia": ["Lauren"],
+    "investigator": ["Mira"],
+    "doctor": ["Spencer"],
+    "innocent": ["John","Kevin","Aaren"]
+]
+
+
+
 class PlayerDatabase{
     
-    var players: [String : [String]] = [:]
+    //var players: [String : [String]] = [:]
 
     func assignRoles(members: [String]) -> [String: [String]]{
         players = [

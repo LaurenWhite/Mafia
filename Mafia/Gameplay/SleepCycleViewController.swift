@@ -10,13 +10,22 @@ import UIKit
 
 class SleepCycleViewController: UIViewController {
     
+    var players: [String:[String]] = [//Player:Role
+        "mafia": ["Lauren"],
+        "investigator": ["Mira"],
+        "doctor": ["Spencer"],
+        "innocent": ["John","Kevin","Aaren"]
+    ]
+    
+    
     //UI OUTLETS
     @IBOutlet weak var centeredImageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
     
     //GENERAL VARIABLE
     var victim: String?
-    var players: [String: [String]]?
+    var currentTurn: String?
+    //var players: [String: [String]]!
     
     //REFERENCES
     let playerDatabase = PlayerDatabase()
@@ -32,11 +41,9 @@ class SleepCycleViewController: UIViewController {
         wakeDoctor()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        presentSelectionList()
     }
-    
     
     func everyoneSleep(){
         //Display moon image
@@ -58,10 +65,16 @@ class SleepCycleViewController: UIViewController {
             //print(player)
             //Segue to Table View for vote
         //}
-        playerList.turn = "mafia"
-        performSegue(withIdentifier: "displayplayerlist", sender: nil)
+        if(players["mafia"]!.contains(username)){
+            currentTurn = "mafia"
+            viewDidAppear(true)
+        }
         victim = playerList.mostVotes()
         messageLabel.text = "Mafia close you eyes."
+    }
+    
+    func presentSelectionList(){
+        performSegue(withIdentifier: "toselectionlist", sender: nil)
     }
     
     func wakeInvestigator(){
@@ -80,5 +93,13 @@ class SleepCycleViewController: UIViewController {
         //Doctor can select one, give immunity for the night
         //Give message to doctor: Close your eyes
         //Return to moon image
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? PlayerListTVC{
+            destination.turn = currentTurn
+        }
     }
 }

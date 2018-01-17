@@ -56,7 +56,7 @@ class LobbyDatabase{
     
     
     func deleteEmptyLobbies(){
-        
+        //observe lobbies where the player count has hit 0 and remove them
     }
         
 }
