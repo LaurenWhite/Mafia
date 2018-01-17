@@ -19,24 +19,26 @@ class JoinLobbyTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lobbies = []
         observeLobbies()
     }
 
     func observeLobbies(){
 
-        lobbyList.observe(.value) { (snapshot) in
-            
+        lobbyList.observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children.allObjects{
                 let snap = child as! DataSnapshot
                 self.lobbies.append(snap.key)
                 //if let snapshotValue = snapshot.value as? NSDictionary, let snapVal = snapshotValue[snap.key] as? AnyObject {
-                    //print("val" , snapVal)
+                //print("val" , snapVal)
                 //}
             }
             self.tableView.reloadData()
-        }
+        })
+            
     }
+
+
 
     // MARK: - Table view data source
 
@@ -64,11 +66,9 @@ class JoinLobbyTVC: UITableViewController {
         if let destination = segue.destination as? InLobbyViewController,
             let tableViewCell = sender as? UITableViewCell,
             let index = tableView.indexPath(for: tableViewCell)?.row{
-            // Get the new view controller using segue.destinationViewController.
-            // Pass the selected object to the new view controller.
-            let selectedLobby = lobbies[index]
-            destination.lobbyName = selectedLobby
-            lobbyDatabase.addMember(username: username, lobbyName: selectedLobby)
+                let selectedLobby = lobbies[index]
+                destination.lobbyName = selectedLobby
+                lobbyDatabase.addMember(username: username, lobbyName: selectedLobby)
         }
     }
 

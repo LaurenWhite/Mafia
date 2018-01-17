@@ -8,7 +8,7 @@
 
 import UIKit
 
-var username = "Lauren"
+var username = "Jerry"
 
 class UsernameViewController: UIViewController {
 

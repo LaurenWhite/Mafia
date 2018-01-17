@@ -54,7 +54,34 @@ class LobbyDatabase{
         }
     }
     
-    
+    func removeMember(username: String, lobbyName: String){
+        /*curLobby.child("members").observe(.value) { (snapshot) in
+            if let curMembers = snapshot.value as? [String:String]{
+                self.members = Array(curMembers.values)
+                self.memberListTableView.reloadData()
+                self.monitorPlayerCount()
+            }
+        }*/
+        lobby.child(lobbyName).child("members").observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children.allObjects{
+                let snap = child as! DataSnapshot
+                if let snapshotValue = snapshot.value as? NSDictionary, let snapVal = snapshotValue[snap.key] as? AnyObject {
+                    if (snapVal as! String == username){
+                        let removalKey = snap.key
+                        lobby.child(lobbyName).child("members").child(removalKey).removeValue()
+                    }
+                }
+            }
+            lobby.child(lobbyName).child("playerCount").observeSingleEvent(of: .value) { (snapshot) in
+                if let currentCount = snapshot.value as? Int {
+                    self.currentCount = currentCount
+                    let newCount = currentCount - 1
+                    lobby.child(lobbyName).child("playerCount").setValue(newCount)
+                }
+            }
+        }
+    }
+
     func deleteEmptyLobbies(){
         //observe lobbies where the player count has hit 0 and remove them
     }
