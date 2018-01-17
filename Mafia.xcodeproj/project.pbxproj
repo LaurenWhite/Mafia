@@ -23,6 +23,7 @@
 		4E0D4ACE2007D6000002961C /* PlayerListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4ACD2007D6000002961C /* PlayerListTVC.swift */; };
 		4E0D4AD02007D61A0002961C /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4ACF2007D61A0002961C /* Players.swift */; };
 		4E0D4AD22007EBE00002961C /* VotedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D4AD12007EBE00002961C /* VotedViewController.swift */; };
+		4EA8862B200FABE900CACEC6 /* JoinLobbyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8862A200FABE900CACEC6 /* JoinLobbyTVC.swift */; };
 		A234738ABBE55A863D42B279 /* Pods_MafiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		4E0D4ACD2007D6000002961C /* PlayerListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListTVC.swift; sourceTree = "<group>"; };
 		4E0D4ACF2007D61A0002961C /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		4E0D4AD12007EBE00002961C /* VotedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotedViewController.swift; sourceTree = "<group>"; };
+		4EA8862A200FABE900CACEC6 /* JoinLobbyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinLobbyTVC.swift; sourceTree = "<group>"; };
 		5AF09F5D82C4F08D5B21F4AF /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
 		622B19EFD25566CA8890A024 /* Pods_MafiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MafiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED0AEB1CF15886BDA7ACAB1 /* Pods-MafiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MafiaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MafiaTests/Pods-MafiaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				4E07D5112009CD9E007E28AD /* UsernameViewController.swift */,
 				4E0D4AA520058C810002961C /* ViewController.swift */,
 				4E07D5152009DB05007E28AD /* NewLobbyViewController.swift */,
+				4EA8862A200FABE900CACEC6 /* JoinLobbyTVC.swift */,
 				4E07D51A200EC3B7007E28AD /* InLobbyViewController.swift */,
 			);
 			path = Setup;
@@ -401,6 +404,7 @@
 				4E0D4ACE2007D6000002961C /* PlayerListTVC.swift in Sources */,
 				4E07D5162009DB05007E28AD /* NewLobbyViewController.swift in Sources */,
 				4E0D4AD22007EBE00002961C /* VotedViewController.swift in Sources */,
+				4EA8862B200FABE900CACEC6 /* JoinLobbyTVC.swift in Sources */,
 				4E0D4AD02007D61A0002961C /* Players.swift in Sources */,
 				4E0D4ACA2007C6540002961C /* SleepCycleViewController.swift in Sources */,
 				4E0D4AA620058C810002961C /* ViewController.swift in Sources */,

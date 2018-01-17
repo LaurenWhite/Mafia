@@ -18,32 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUh-1Q-00u">
-                                <rect key="frame" x="23" y="373" width="328" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Create A Lobby">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Y6L-bQ-G7f" kind="show" id="xcy-vJ-qEt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofl-qQ-yyC">
-                                <rect key="frame" x="23" y="471" width="328" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Join A Lobby">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Gsj-44-ayh" kind="show" id="nM2-cj-V61"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="5js-2i-DaX">
+                                <rect key="frame" x="20" y="426" width="335" height="141"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUh-1Q-00u">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="48"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Create A Lobby">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Y6L-bQ-G7f" kind="show" id="xcy-vJ-qEt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofl-qQ-yyC">
+                                        <rect key="frame" x="0.0" y="93" width="335" height="48"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Join A Lobby">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Gsj-44-ayh" kind="show" id="nM2-cj-V61"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5js-2i-DaX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0tA-bb-bxs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5js-2i-DaX" secondAttribute="trailing" constant="20" id="OG7-J0-b6I"/>
+                            <constraint firstItem="5js-2i-DaX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m04-G1-vw6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5js-2i-DaX" secondAttribute="bottom" constant="100" id="nbS-4T-ScH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Zfa-Pm-9AQ"/>
@@ -187,17 +196,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lMY-4p-on7">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lMY-4p-on7">
                                 <rect key="frame" x="37" y="46" width="300" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lobby Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VST-2n-cAN">
-                                        <rect key="frame" x="0.0" y="0.0" width="196" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lobby Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VST-2n-cAN">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pku-Lm-caI">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pku-Lm-caI">
                                         <rect key="frame" x="0.0" y="51" width="300" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="QVg-xm-8eE"/>
@@ -211,10 +219,12 @@
                                         </connections>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="VST-2n-cAN" firstAttribute="centerX" secondItem="lMY-4p-on7" secondAttribute="centerX" id="6Q5-Q8-s72"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HM-Uj-Knz">
-                                <rect key="frame" x="23" y="496" width="328" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HM-Uj-Knz">
+                                <rect key="frame" x="20" y="519" width="335" height="48"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Create Lobby">
@@ -226,6 +236,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lMY-4p-on7" firstAttribute="leading" secondItem="Gov-CA-a6n" secondAttribute="leading" constant="37" id="5ul-qa-s8r"/>
+                            <constraint firstItem="lMY-4p-on7" firstAttribute="top" secondItem="Gov-CA-a6n" secondAttribute="top" constant="26" id="O75-8X-BPx"/>
+                            <constraint firstItem="8HM-Uj-Knz" firstAttribute="leading" secondItem="Gov-CA-a6n" secondAttribute="leading" constant="20" id="YBo-s8-UfR"/>
+                            <constraint firstItem="8HM-Uj-Knz" firstAttribute="centerX" secondItem="wjV-LB-dYE" secondAttribute="centerX" id="fLv-gh-u41"/>
+                            <constraint firstItem="Gov-CA-a6n" firstAttribute="trailing" secondItem="8HM-Uj-Knz" secondAttribute="trailing" constant="20" id="v1g-Uq-5eq"/>
+                            <constraint firstItem="Gov-CA-a6n" firstAttribute="bottom" secondItem="8HM-Uj-Knz" secondAttribute="bottom" constant="100" id="yf0-qY-RYw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gov-CA-a6n"/>
                     </view>
                     <connections>
@@ -330,22 +348,25 @@
             </objects>
             <point key="canvasLocation" x="2364" y="584.25787106446785"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Join LobbyTVC-->
         <scene sceneID="1l4-sC-Jpc">
             <objects>
-                <tableViewController id="Gsj-44-ayh" sceneMemberID="viewController">
+                <tableViewController id="Gsj-44-ayh" customClass="JoinLobbyTVC" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eeR-Sm-NJj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="P8d-cX-wzW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lobbyCell" id="P8d-cX-wzW">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P8d-cX-wzW" id="MHV-Jv-FgW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mfR-ZD-p9y" kind="presentation" id="Y96-R5-5yM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -406,4 +427,7 @@
             <point key="canvasLocation" x="-1310" y="339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y96-R5-5yM"/>
+    </inferredMetricsTieBreakers>
 </document>
